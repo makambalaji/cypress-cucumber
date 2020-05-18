@@ -24,6 +24,6 @@
       "charts": true
     },
     "env": {
-      "TAGS": ""
+      "TAGS": "login"
   }
 }
