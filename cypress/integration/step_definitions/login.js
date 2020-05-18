@@ -32,3 +32,7 @@ And("I click the sign-in button", () => {
 Then("I should be able to login", () => {
   loginPage.checkLoginSuccess();
 });
+
+Then("error should displayed as {string}", (error_message) => {
+  loginPage.checkErrorMessage(error_message);
+});

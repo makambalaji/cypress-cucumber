@@ -20,6 +20,10 @@ class loginPage {
 	static checkLoginSuccess() {
 		cy.get('[aria-label="Help menu"]').should('be.visible')
 	}
+
+	static checkErrorMessage(error_message) {
+		cy.get('div.error-placeholder').should('contain.text', error_message)
+	}
 }
 
 export default loginPage

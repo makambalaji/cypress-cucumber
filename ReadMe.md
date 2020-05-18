@@ -27,7 +27,12 @@ clcik on login.feature link under Integration folder
 
 ### Run with command
 
-npm run cy:bdd
+Tag the scenarios with "@regression" and update the env tags in cypress.json file
+"env": {
+      "TAGS": "@regression"
+  }
+Run below command, then only regression test suite executes
+npm run cypress
 
 ## Automation scripts creation process
 

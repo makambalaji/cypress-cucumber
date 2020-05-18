@@ -3,7 +3,7 @@ Feature: Login to Application
     As a valid user
     I want to log in to the Application
 
-    @login
+    @smoke
     Scenario Outline: Valid Login
         Given I open the login Page
         When I enter a username "<userName>"
@@ -15,10 +15,16 @@ Examples:
 | userName   | password                 |
 | kubeadmin  | xM3si-ii9Gn-AFku2-edeMA  |
 
-    @login-1
-    Scenario: Invalid Login
+    @regression
+    Scenario Outline: Invalid Login
         Given I open the login Page
-        When I enter a username "kubeadmin"
-        And I enter a password "rJynw-65PGu-B8ZKC-bvT7P"
+        When I enter a username "<userName>"
+        And I enter a password "<password>"
         And I click the sign-in button
-        Then I should be able to login
+        Then error should displayed as "<error_message>"
+
+Examples:
+| userName   | password                 | error_message                                |
+| kubeadmin  | xM3si-ii9Gn-AFku2-edeMb  | Invalid login or password. Please try again. |
+|     a      | xM3si-ii9Gn-AFku2-edeMb  | Invalid login or password. Please try again. |
+| kubeadmin  |            a             | An authentication error occurred.            |
