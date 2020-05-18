@@ -5,3 +5,4 @@ cypress/screenshots
 test-results/
 cypress/e2e
 cypress/testData
+cypress/reports

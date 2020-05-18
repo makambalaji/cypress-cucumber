@@ -15,8 +15,15 @@
     "failOnStatusCode": false,
     "ignoreTestFiles": ["*.js"],
     "testFiles": "**/*.{feature,features}",
-    "reporter": "junit",
+    "reporter": "./node_modules/mochawesome/src/mochawesome.js",
     "reporterOptions": {
-      "mochaFile": "test-results/test-output-[hash].xml"
-    }
+      "reportDir": "cypress/reports/separate-reports",
+      "overwrite": false,
+      "html": false,
+      "json": true,
+      "charts": true
+    },
+    "env": {
+      "TAGS": ""
+  }
 }
