@@ -34,7 +34,7 @@ Tag the scenarios with "@regression" and update the env tags in cypress.json fil
 Run below command, then only regression test suite executes
 npm run cypress
 
-Html & Json Reports will get generated {update - to test webhook}
+Html & Json Reports will get generated 
 
 ## Automation scripts creation process
 
