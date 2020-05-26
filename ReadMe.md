@@ -42,3 +42,13 @@ Reports will get generated
 2. Create the step definition files and place it under integration/step_definitions/
     - Step definition file name should have same name as feature file name
     Eg : login.feature -> login.js as step definition file
+
+## Set up the allure reporter
+
+1. Install the Allure-reporter and allure-commandline
+    npm i -D mocha-allure-reporter
+    npm i -D allure-commandline
+2. Install mocha reporter
+    mocha --reporter mocha-allure-reporter
+
+## Best Practices

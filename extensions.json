@@ -5,7 +5,8 @@
     "alexkrechik.cucumberautocomplete",
     "msjsdiag.debugger-for-chrome",
     "dbaeumer.vscode-eslint",
-    "davidanson.vscode-markdownlint"
+    "davidanson.vscode-markdownlint",
+    "dylanmoerland.cypress-cucumber-steps"
     ],
     "ignore": [
         "getgauge.gauge",

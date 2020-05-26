@@ -13,7 +13,7 @@ Feature: Login to Application
 
 Examples:
 | userName   | password                 |
-| kubeadmin  | xM3si-ii9Gn-AFku2-edeMA  |
+| kubeadmin  | fLbUI-MNrAn-sR5V6-S94Pw  |
 
     @regression
     Scenario Outline: Invalid Login

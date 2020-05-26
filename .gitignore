@@ -6,3 +6,5 @@ test-results/
 cypress/e2e
 cypress/testData
 cypress/reports
+allure-report
+allure-results
