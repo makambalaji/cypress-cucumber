@@ -9,27 +9,27 @@ beforeEach(() => {
   cy.log("I will run before each Scenario of login.feature");
 });
 
-Given("I will run before all the scenarios", () => {
+Given("user will run before all the scenarios", () => {
   cy.log("Scenario - Started");
 });
 
-Given("I open the login Page", () => {
+Given("user open the login Page", () => {
   loginPage.visitLoginPage();
 });
 
-When("I enter a username {string}", (username) => {
+When("user enter a username {string}", (username) => {
   loginPage.fillUsername(username);
 });
 
-And("I enter a password {string}", (password) => {
+And("user enter a password {string}", (password) => {
   loginPage.fillPassword(password);
 });
 
-And("I click the sign-in button", () => {
+And("user click the sign-in button", () => {
   loginPage.submitLoginDetails();
 });
 
-Then("I should be able to login", () => {
+Then("user should be able to login", () => {
   loginPage.checkLoginSuccess();
 });
 

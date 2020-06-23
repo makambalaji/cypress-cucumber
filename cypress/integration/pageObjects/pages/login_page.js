@@ -1,7 +1,7 @@
 class loginPage {
 	static visitLoginPage() {
         cy.visit('/')
-        cy.get('a[title="Log in with kube:admin"]').click()
+        // cy.get('a[title="Log in with kube:admin"]').click()
         cy.url().should('include', 'login')
 	}
 
