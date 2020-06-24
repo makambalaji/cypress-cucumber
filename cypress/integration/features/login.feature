@@ -3,7 +3,7 @@ Feature: Login to Application
 As a valid user
 I want to log in to the Application
 
-@smoke
+@demo
 Scenario Outline: Valid Login
     Given user open the login Page
     When user enter a username "<userName>"
@@ -13,10 +13,10 @@ Scenario Outline: Valid Login
 
 Examples:
 | userName   | password                |
-| kubeadmin  | uMRpJ-NFVxs-qi4vZ-XpnXk |
+| kubeadmin  | VpTYd-4YMhN-p3Q8f-PfNsz |
 
 
-@regression
+@demo1
 Scenario Outline: Invalid Login
     Given user open the login Page
     When user enter a username "<userName>"

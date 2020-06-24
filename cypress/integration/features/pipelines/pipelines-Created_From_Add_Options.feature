@@ -1,13 +1,12 @@
 Feature: Create Pipeline from Add Options
-    As a user I want to view pipeline, create, edit and delete the pipeline
+    As a user, I want to view pipeline, create, edit and delete the pipeline
 
 Background:
-    Given user logged into the openshift application
-    And openshift cluster is installed with pipeline operator
+    Given openshift cluster is installed with pipeline operator
     And user is at the project namespace "AUT_MB_Demo" in dev perspecitve
 
 
-@regression
+@regression, @demo
 Scenario: From Git Page pipelines section: P-01-TC03
    Given user is at "Add" page
    When user clicks From Git card on the +Add page
@@ -23,11 +22,11 @@ Scenario: From Dockerfile Page Pipelines section : P-01-TC04
    And Add pipeline section is displayed
 
 
-@regression
+@regression, @demo
 Scenario Outline: Add Pipeline display in git workload for builder image : P-02-TC08
    Given user is at "Import from git" form
-   When user type "Git Repo url" as "<git_url>"
-   Then "Add pipeline" checkbox is displayed
+   When user type Git Repo url as "<git_url>"
+   Then Add pipeline checkbox is displayed
 
 Examples:
 | git_url                                                   |
@@ -43,21 +42,21 @@ Examples:
 | https://github.com/sclorg/nodejs-ex.git                   |
 
 
-@regression, @smoke
+@regression, @smoke, @demo
 Scenario Outline: Create a pipeline from git workload with resource type "<resource>" : P-02-TC01, P-02-TC06
    Given user is at "Import from git" form
    When user type Git Repo url as "<git_url>"
    And type Name as "<name>" in General section
    And select "<resource>" radio button in Resources section
-   And select "Add Pipeline" checkbox in Pipelines section
-   And click "Create" button on Add page
-   Then user navigates to topology page
-   And created workload is present in topology page
+   And select Add Pipeline checkbox in Pipelines section
+   And click Create button on Add page
+   Then user redirects to topology page
+   And created workload "<name>" is present in topology page
 
 Examples:
-| git_url                                 | pipeline_name    | resource          | name             |
-| https://github.com/sclorg/nodejs-ex.git | nodejs-ex.git-D  | Deployment        | nodejs-ex.git-D  |
-| https://github.com/sclorg/nodejs-ex.git | nodejs-ex.git-DC | Deployment Config | nodejs-ex.git-DC |
+| git_url                                 | resource         | name             |
+| https://github.com/sclorg/nodejs-ex.git | Deployment       | nodejs-ex.git-D  |
+| https://github.com/sclorg/nodejs-ex.git | DeploymentConfig | nodejs-ex.git-DC |
 
 
 @regression
